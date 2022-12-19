@@ -41,9 +41,6 @@ interface IndexPageProps
 
 const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
   const [catImageUrl, setCatImageUrl] = useState(initialCatImageUrl)
-  // const [catImageUrl, setCatImageUrl] = useState(
-  //   'https://cdn2.thecatapi.com/images/bpc.jpg'
-  // )
   const handleClick = async () => {
     const image = await fetchCatImage()
     setCatImageUrl(image.url)
